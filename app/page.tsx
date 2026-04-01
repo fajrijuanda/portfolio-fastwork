@@ -11,6 +11,18 @@ export default function HomePage() {
     ...skills.data.map((label) => ({ label, tone: "data" })),
     ...skills.workflow.map((label) => ({ label, tone: "workflow" }))
   ];
+  const totalCategories = new Set(projects.map((project) => project.category)).size;
+  const totalTechnologies = new Set(projects.flatMap((project) => project.tags)).size;
+  const totalCaseStudies = projects.filter((project) => Boolean(project.caseStudy)).length;
+  const totalProjectScreens = projects.reduce((total, project) => total + project.imageCount, 0);
+  const topProjectDomains = Object.entries(
+    projects.reduce<Record<string, number>>((acc, project) => {
+      acc[project.category] = (acc[project.category] ?? 0) + 1;
+      return acc;
+    }, {})
+  )
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 4);
 
   return (
     <>
@@ -90,9 +102,40 @@ export default function HomePage() {
           </article>
           <article className="panel">
             <h2>Quick Stats</h2>
-            <p>Total Proyek: {projects.length}</p>
-            <p>Featured: {featuredProjects.length}</p>
-            <p>Domain: Cloud, Web App, Mobile, AI/Data, IoT, Data Engineering</p>
+            <div className="quick-stats-grid">
+              <article className="quick-stat-card">
+                <p className="quick-stat-label">Total Proyek</p>
+                <p className="quick-stat-value">{projects.length}</p>
+              </article>
+              <article className="quick-stat-card">
+                <p className="quick-stat-label">Featured Project</p>
+                <p className="quick-stat-value">{featuredProjects.length}</p>
+              </article>
+              <article className="quick-stat-card">
+                <p className="quick-stat-label">Kategori Domain</p>
+                <p className="quick-stat-value">{totalCategories}</p>
+              </article>
+              <article className="quick-stat-card">
+                <p className="quick-stat-label">Teknologi Digunakan</p>
+                <p className="quick-stat-value">{totalTechnologies}+</p>
+              </article>
+            </div>
+
+            <div className="quick-stats-summary">
+              <p>Case study lengkap tersedia untuk {totalCaseStudies} proyek.</p>
+              <p>Galeri dokumentasi produk: {totalProjectScreens} screenshot.</p>
+              <p>Layanan aktif yang ditawarkan: {services.length} kategori.</p>
+            </div>
+
+            <h3 style={{ marginTop: 14 }}>Top Domain Proyek</h3>
+            <ul className="quick-stats-list">
+              {topProjectDomains.map(([category, count]) => (
+                <li key={category}>
+                  <span>{category}</span>
+                  <strong>{count} proyek</strong>
+                </li>
+              ))}
+            </ul>
           </article>
         </div>
       </section>

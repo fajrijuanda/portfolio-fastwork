@@ -1078,12 +1078,199 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
   }
 };
 
+type CaseStudy = NonNullable<Project["caseStudy"]>;
+type FeatureCard = CaseStudy["featureCards"][number];
+
+const featureIconByCode: Record<string, string> = {
+  IOT: "📡",
+  UI: "🖥️",
+  ALRT: "🚨",
+  LOG: "🗂️",
+  OPS: "🛠️",
+  UX: "🎨",
+  CART: "🛒",
+  ORDR: "📦",
+  API: "🔌",
+  GIS: "🗺️",
+  SRCH: "🔎",
+  DATA: "📊",
+  SYNC: "🔄",
+  PLAN: "🧭",
+  MON: "📟",
+  ALRM: "🚨",
+  HIST: "📈",
+  RPT: "📋",
+  CALL: "📞",
+  DISP: "🚑",
+  LIVE: "🟢",
+  RES: "🧰",
+  SELL: "🏪",
+  MOB: "📱",
+  WISH: "💝",
+  PAY: "💳",
+  TRK: "🚚",
+  CRWL: "🕸️",
+  NLP: "🧠",
+  TOP: "🧩",
+  TRND: "📈",
+  QR: "🔳",
+  SCAN: "📷",
+  VAL: "✅",
+  AUD: "🧾",
+  TPL: "📄",
+  XLS: "📑",
+  MAIL: "✉️",
+  STAT: "📬",
+  CANV: "🖌️",
+  LAYR: "🗂️",
+  BRSH: "🖍️",
+  EXP: "⬇️",
+  REG: "📝",
+  DOC: "📁",
+  APR: "✅",
+  PROF: "👤",
+  CHK: "☑️",
+  FIND: "🔍",
+  SCORE: "📊",
+  EVID: "🗃️",
+  INFO: "ℹ️",
+  SERV: "🧾",
+  NEWS: "📰",
+  MAP: "🗺️",
+  ADM: "⚙️"
+};
+
+const extraFeatureCardBySlug: Partial<Record<Project["slug"], FeatureCard>> = {
+  "kumbung-jamur": {
+    icon: "🤖",
+    title: "Automation & Device Control",
+    tone: "devops",
+    description:
+      "Integrasi perangkat kontrol membantu tim mengeksekusi tindakan otomatis saat parameter lingkungan keluar dari rentang ideal."
+  },
+  posify: {
+    icon: "🔔",
+    title: "Customer Notification Journey",
+    tone: "workflow",
+    description:
+      "Notifikasi transaksi dan status pesanan menjaga pelanggan tetap terinformasi dari checkout hingga order selesai."
+  },
+  "besra-geonet": {
+    icon: "🧭",
+    title: "Field Navigation Support",
+    tone: "workflow",
+    description:
+      "Informasi lokasi dan arah jalur aset membantu tim lapangan mempercepat inspeksi serta penanganan gangguan."
+  },
+  sikatup: {
+    icon: "🛡️",
+    title: "Preventive Risk Prioritization",
+    tone: "data",
+    description:
+      "Prioritas pemeriksaan ditentukan dari indikator risiko agar tim fokus pada aset dengan potensi gangguan tertinggi."
+  },
+  siaga: {
+    icon: "📍",
+    title: "Location-aware Incident Mapping",
+    tone: "data",
+    description:
+      "Pemetaan lokasi kejadian membantu komando respons memilih rute dan distribusi unit secara lebih presisi."
+  },
+  swiftyle: {
+    icon: "📊",
+    title: "Sales & Retention Insights",
+    tone: "data",
+    description:
+      "Ringkasan performa order, repeat buyer, dan produk favorit membantu tim menyusun strategi pertumbuhan."
+  },
+  echolytics: {
+    icon: "💡",
+    title: "Actionable Insight Layer",
+    tone: "workflow",
+    description:
+      "Temuan sentimen diterjemahkan menjadi rekomendasi langkah komunikasi yang siap dieksekusi tim."
+  },
+  "green-cold": {
+    icon: "📦",
+    title: "Low-stock Alert Automation",
+    tone: "data",
+    description:
+      "Sistem memberi sinyal stok kritis lebih awal agar pengadaan ulang bisa dilakukan sebelum operasional terganggu."
+  },
+  certisend: {
+    icon: "✅",
+    title: "Delivery Validation & Retry",
+    tone: "workflow",
+    description:
+      "Mekanisme validasi hasil kirim dan retry terarah membantu memastikan sertifikat sampai ke penerima yang tepat."
+  },
+  aurora: {
+    icon: "🎨",
+    title: "Creative Preset Library",
+    tone: "dev",
+    description:
+      "Preset kuas dan gaya visual mempercepat eksplorasi desain tanpa harus setup ulang konfigurasi setiap sesi."
+  },
+  "cbi-portal-supplier": {
+    icon: "🏢",
+    title: "Vendor Performance Snapshot",
+    tone: "data",
+    description:
+      "Ringkasan performa supplier membantu tim procurement melakukan review berkala dan keputusan kerja sama."
+  },
+  "cbi-audit-vendor": {
+    icon: "🧾",
+    title: "Compliance Status Monitoring",
+    tone: "data",
+    description:
+      "Status kepatuhan vendor dipantau secara periodik untuk memastikan tindak lanjut audit benar-benar terselesaikan."
+  },
+  "web-desa-mekarjaya": {
+    icon: "📣",
+    title: "Citizen Communication Channel",
+    tone: "workflow",
+    description:
+      "Kanal publikasi terpusat memudahkan penyebaran informasi layanan, pengumuman, dan agenda ke warga."
+  }
+};
+
+const fallbackExtraFeatureCard: FeatureCard = {
+  icon: "🧩",
+  title: "Scalability & Quality Readiness",
+  tone: "workflow",
+  description:
+    "Arsitektur dan alur operasional disiapkan agar solusi tetap stabil ketika penggunaan meningkat."
+};
+
+function normalizeCaseStudy(project: Project, caseStudy: CaseStudy): CaseStudy {
+  const mappedFeatureCards: FeatureCard[] = caseStudy.featureCards.map((card) => ({
+    ...card,
+    icon: featureIconByCode[card.icon] ?? card.icon
+  }));
+
+  if (project.slug !== "hostoo" && project.slug !== "skyflow") {
+    const extraCard = extraFeatureCardBySlug[project.slug] ?? fallbackExtraFeatureCard;
+    while (mappedFeatureCards.length < 6) {
+      mappedFeatureCards.push({ ...extraCard });
+    }
+  }
+
+  return {
+    ...caseStudy,
+    featureCards: mappedFeatureCards.slice(0, 6)
+  };
+}
+
 export const projects: Project[] = [...projectsData]
-  .map((project) => ({
-    ...project,
-    content: enrichedContentBySlug[project.slug] ?? project.content,
-    caseStudy: project.caseStudy ?? caseStudiesBySlug[project.slug]
-  }))
+  .map((project) => {
+    const mergedCaseStudy = project.caseStudy ?? caseStudiesBySlug[project.slug];
+
+    return {
+      ...project,
+      content: enrichedContentBySlug[project.slug] ?? project.content,
+      caseStudy: mergedCaseStudy ? normalizeCaseStudy(project, mergedCaseStudy) : undefined
+    };
+  })
   .sort((a, b) => a.order - b.order);
 
 export const categories = Array.from(new Set(projects.map((project) => project.category))).sort();

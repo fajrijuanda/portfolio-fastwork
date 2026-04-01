@@ -1,6 +1,6 @@
 export const profile = {
   name: "Portfolio",
-  role: "Full Stack Developer & Data Engineer",
+  role: "Full Stack Developer & Data Engineer Team",
   summary:
     "Kami berdua membangun portfolio ini dengan fokus gabungan di software engineering dan data engineering, dari UI modern sampai data workflow yang terukur.",
   contact: {
@@ -21,13 +21,13 @@ export type TeamMember = {
 export const teamMembers: TeamMember[] = [
   {
     name: "Fajri Yanuar Shiddiq Juanda",
-    role: "Full Stack Developer & Data Engineer",
+    role: "Full Stack Developer",
     linkedin: "https://linkedin.com/in/fajri-yanuar-shiddiq-juanda-3054502b8",
     photo: "/images/profile-fajri.png"
   },
   {
     name: "Indra Rasyid",
-    role: "Product & Engineering Collaborator",
+    role: "Data Engineer",
     linkedin: "https://www.linkedin.com/in/indra-rasyid/",
     photo: "/images/profile-indra.jpeg"
   }

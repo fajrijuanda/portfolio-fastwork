@@ -678,6 +678,66 @@ h4 {
   color: color-mix(in srgb, var(--primary) 78%, #ffffff 22%);
 }
 
+.quick-stats-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.quick-stat-card {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: color-mix(in srgb, var(--surface-soft) 86%, transparent 14%);
+  padding: 10px 12px;
+}
+
+.quick-stat-label {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.quick-stat-value {
+  margin: 4px 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.quick-stats-summary {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.quick-stats-summary p {
+  margin: 0;
+}
+
+.quick-stats-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.quick-stats-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: color-mix(in srgb, var(--surface) 88%, transparent 12%);
+}
+
+.quick-stats-list strong {
+  color: color-mix(in srgb, var(--primary) 74%, #ffffff 26%);
+}
+
 .card-link {
   display: block;
   height: 100%;
@@ -901,6 +961,10 @@ h4 {
 
   .team-member {
     align-items: flex-start;
+  }
+
+  .quick-stats-grid {
+    grid-template-columns: 1fr;
   }
 
   .case-study-grid,
