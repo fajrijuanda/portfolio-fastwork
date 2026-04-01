@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Fajri Yanuar Shiddiq Juanda",
+  name: "Portfolio",
   role: "Full Stack Developer & Data Engineer",
   summary:
     "Kami berdua membangun portfolio ini dengan fokus gabungan di software engineering dan data engineering, dari UI modern sampai data workflow yang terukur.",
@@ -10,6 +10,28 @@ export const profile = {
     linkedin: "https://linkedin.com/in/fajri-yanuar-shiddiq-juanda-3054502b8"
   }
 };
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  linkedin: string;
+  photo: string;
+};
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: "Fajri Yanuar Shiddiq Juanda",
+    role: "Full Stack Developer & Data Engineer",
+    linkedin: "https://linkedin.com/in/fajri-yanuar-shiddiq-juanda-3054502b8",
+    photo: "/images/profile-fajri.png"
+  },
+  {
+    name: "Indra Rasyid",
+    role: "Product & Engineering Collaborator",
+    linkedin: "https://www.linkedin.com/in/indra-rasyid/",
+    photo: "/images/profile-indra.jpeg"
+  }
+];
 
 export const education = [
   {

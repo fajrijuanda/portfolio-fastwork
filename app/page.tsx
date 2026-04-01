@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ProjectFilterGrid } from "@/components/project-filter-grid";
 import { featuredProjects, projects } from "@/lib/projects";
-import { profile, services, skills } from "@/lib/profile";
+import { profile, services, skills, teamMembers } from "@/lib/profile";
 
 export default function HomePage() {
   const skillBadges = [
@@ -59,10 +60,33 @@ export default function HomePage() {
       <section className="section" id="about">
         <div className="container grid-2">
           <article className="panel">
-            <h2>Tentang Saya</h2>
+            <h2>Tentang Kami</h2>
             <p>
               {profile.summary}
             </p>
+            <h3 style={{ marginTop: 14 }}>Tim Inti</h3>
+            <div className="team-members">
+              {teamMembers.map((member) => (
+                <article className="team-member" key={member.name}>
+                  <div className="team-avatar-wrap">
+                    <Image
+                      src={member.photo}
+                      alt={`Foto ${member.name}`}
+                      width={80}
+                      height={80}
+                      className="team-avatar"
+                    />
+                  </div>
+                  <div className="team-member-body">
+                    <h4>{member.name}</h4>
+                    <p>{member.role}</p>
+                    <a href={member.linkedin} rel="noreferrer" target="_blank">
+                      Lihat LinkedIn
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
           </article>
           <article className="panel">
             <h2>Quick Stats</h2>

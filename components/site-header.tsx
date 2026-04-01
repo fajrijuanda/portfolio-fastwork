@@ -12,8 +12,8 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container nav">
         <Link className="brand" href="/">
-          <span className="brand-dot">F</span>
-          <span>Fajri Portfolio</span>
+          <span className="brand-dot">P</span>
+          <span>Portfolio</span>
         </Link>
         <nav className="nav-links" aria-label="Main">
           <ThemeToggle />

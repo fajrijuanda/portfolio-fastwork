@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProjectGallery } from "@/components/project-gallery";
+import { ProjectCard } from "@/components/project-card";
 import {
   getProjectBySlug,
   getProjectImages,
@@ -120,10 +121,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageParams) {
           <h2 style={{ marginBottom: 14 }}>Proyek Terkait</h2>
           <div className="projects-grid">
             {relatedProjects.map((related) => (
-              <Link className="panel" href={`/project/${related.slug}`} key={related.slug}>
-                <h3>{related.title}</h3>
-                <p className="text-muted">{related.description}</p>
-              </Link>
+              <ProjectCard key={related.slug} project={related} />
             ))}
           </div>
         </div>

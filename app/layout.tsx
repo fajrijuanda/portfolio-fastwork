@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Fajri Yanuar Shiddiq Juanda | Portfolio",
+  title: "Portfolio",
   description:
     "Portfolio statis berbasis Next.js tanpa database untuk menampilkan proyek Full Stack, Cloud, Mobile, dan IoT."
 };
