@@ -13,8 +13,7 @@ export default function HomePage() {
   ];
   const totalCategories = new Set(projects.map((project) => project.category)).size;
   const totalTechnologies = new Set(projects.flatMap((project) => project.tags)).size;
-  const totalCaseStudies = projects.filter((project) => Boolean(project.caseStudy)).length;
-  const totalProjectScreens = projects.reduce((total, project) => total + project.imageCount, 0);
+  const coreTeamSize = teamMembers.length;
   const topProjectDomains = Object.entries(
     projects.reduce<Record<string, number>>((acc, project) => {
       acc[project.category] = (acc[project.category] ?? 0) + 1;
@@ -122,9 +121,9 @@ export default function HomePage() {
             </div>
 
             <div className="quick-stats-summary">
-              <p>Case study lengkap tersedia untuk {totalCaseStudies} proyek.</p>
-              <p>Galeri dokumentasi produk: {totalProjectScreens} screenshot.</p>
+              <p>Tim inti: {coreTeamSize} orang (Full Stack Developer & Data Engineer).</p>
               <p>Layanan aktif yang ditawarkan: {services.length} kategori.</p>
+              <p>Model kolaborasi: end-to-end dari perencanaan, development, hingga deployment.</p>
             </div>
 
             <h3 style={{ marginTop: 14 }}>Top Domain Proyek</h3>
