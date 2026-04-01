@@ -1,0 +1,42 @@
+/* Print Styles - Minimal & Clean */
+@media print {
+    /* Page Setup */
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    html, body {
+        width: 210mm;
+        height: 296mm; /* Exact A4 Height */
+        margin: 0;
+        padding: 0;
+        background: white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        overflow: hidden !important; /* Prevent page 2 */
+    }
+
+    /* Hide Global UI Elements */
+    nav,
+    footer,
+    #cursorDot,
+    #cursorOutline,
+    #loadingScreen,
+    [aria-label="Scroll to top"],
+    .fixed,
+    .bg-grid-pattern,
+    .absolute /* Hide absolute positioned decorative blobs */
+    {
+        display: none !important;
+    }
+
+    /* Ensure the print container spans full width */
+    .print\:block {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        display: block !important;
+        overflow: hidden !important;
+    }
+}
