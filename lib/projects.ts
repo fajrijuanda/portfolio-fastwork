@@ -399,6 +399,20 @@ const projectsData = [
     order: 18,
     imageCount: 9,
     imageExtension: "jpeg"
+  },
+  {
+    slug: "baruna-teknik-globalindo",
+    title: "PT Baruna Teknik Globalindo",
+    category: "Web App",
+    tags: ["Next.js", "Company Profile", "Product Catalog", "UI/UX"],
+    description:
+      "Website profil perusahaan dan katalog produk digital untuk distributor pompa industri dan perlengkapan mekanikal.",
+    content:
+      "Proyek ini melibatkan pengembangan website company profile yang komprehensif untuk PT Baruna Teknik Globalindo, menampilkan katalog lengkap produk pompa industri, motor listrik, dan layanan engineering mereka.",
+    featured: false,
+    order: 19,
+    imageCount: 0,
+    imageExtension: "png"
   }
 ] satisfies Project[];
 
@@ -434,7 +448,9 @@ const enrichedContentBySlug: Partial<Record<Project["slug"], string>> = {
   "quantum-htr":
     "Quantum HTR adalah sistem cerdas berbasis Computer Vision yang dirancang khusus untuk membaca tulisan tangan aksara Korea (Hangeul) pada kertas format Wongoji. Sistem ini melalui proses pipeline yang kompleks mulai dari preprocessing citra, deteksi grid kolom, segmentasi karakter per kotak, hingga klasifikasi menggunakan model Deep Learning. Web interface yang dibangun dengan Django memudahkan proses unggah gambar dan menampilkan detail hasil prediksi beserta tingkat akurasi (Character Error Rate).",
   panopticon:
-    "Panopticon adalah platform simulasi di mana agen kecerdasan buatan dapat hidup, berinteraksi, dan membangun peradaban secara otonom. Dibangun dengan Next.js pada sisi frontend dan Python untuk backend engine, sistem ini mensimulasikan sistem hukum, mobilitas sosial melalui pernikahan, dan dinamika kejahatan yang diadili oleh Lord AI. Platform ini juga dilengkapi sistem save state untuk pergantian era peradaban dan WebSocket untuk monitoring aktivitas agen secara real-time."
+    "Panopticon adalah platform simulasi di mana agen kecerdasan buatan dapat hidup, berinteraksi, dan membangun peradaban secara otonom. Dibangun dengan Next.js pada sisi frontend dan Python untuk backend engine, sistem ini mensimulasikan sistem hukum, mobilitas sosial melalui pernikahan, dan dinamika kejahatan yang diadili oleh Lord AI. Platform ini juga dilengkapi sistem save state untuk pergantian era peradaban dan WebSocket untuk monitoring aktivitas agen secara real-time.",
+  "baruna-teknik-globalindo":
+    "Website company profile untuk PT Baruna Teknik Globalindo, distributor peralatan mekanikal, elektrikal, dan instrumentasi. Platform ini dirancang sebagai katalog digital B2B untuk memudahkan klien industri menjelajahi ratusan varian produk mulai dari motor listrik, pompa sentrifugal kelas berat, hingga alat-alat keselamatan kerja dari berbagai merek global terkemuka."
 };
 
 const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["caseStudy"]>>> = {
@@ -1285,6 +1301,44 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
       "Menciptakan arsitektur backend yang stabil untuk mengelola ratusan call LLM secara sinkronus maupun asinkronus.",
       "Menyajikan antarmuka pengawasan dunia (world observer UI) yang reaktif menggunakan state management Zustand dan WebSocket."
     ]
+  },
+  "baruna-teknik-globalindo": {
+    hook:
+      "Transformasi digital untuk perusahaan distributor alat berat industri, membawa katalog ratusan varian pompa dan motor listrik ke dalam satu platform website yang cepat, SEO-friendly, dan mudah dinavigasi oleh calon klien B2B.",
+    featureCards: [
+      {
+        icon: "🏭",
+        title: "Digital Product Catalog",
+        tone: "workflow",
+        description:
+          "Sistem katalog terstruktur yang mengkategorikan produk berdasarkan merek, tipe pompa, dan motor listrik untuk memudahkan pencarian."
+      },
+      {
+        icon: "⚡",
+        title: "Fast & SEO Optimized",
+        tone: "dev",
+        description:
+          "Website dioptimalkan untuk kecepatan muat yang tinggi dan pencarian organik, meningkatkan visibilitas perusahaan di mesin pencari."
+      },
+      {
+        icon: "📱",
+        title: "Responsive B2B Portal",
+        tone: "devops",
+        description:
+          "Antarmuka yang sepenuhnya responsif, memastikan klien industri dapat mengakses informasi teknis produk melalui perangkat mobile maupun desktop."
+      }
+    ],
+    journey: [
+      "Menganalisis kebutuhan digitalisasi katalog produk fisik perusahaan menjadi format digital yang terstruktur.",
+      "Merancang struktur navigasi berbasis kategori produk (Pompa, Motor Listrik, General Supply) dan brand (Ebara, KSB, TECO, dll).",
+      "Mengembangkan frontend yang responsif dan ringan agar dapat diakses dengan cepat oleh target market industri.",
+      "Melakukan optimasi SEO dasar agar mudah ditemukan oleh calon pembeli B2B saat mencari solusi mekanikal."
+    ],
+    outcomes: [
+      "Meningkatkan profesionalisme dan kehadiran digital (online visibility) perusahaan di pasar industri skala nasional.",
+      "Mempermudah tim sales dalam memberikan referensi katalog produk digital kepada klien kapan saja.",
+      "Menyediakan platform informasi produk 24/7 yang dapat diakses dengan lancar tanpa kendala teknis."
+    ]
   }
 };
 
@@ -1462,6 +1516,13 @@ const extraFeatureCardBySlug: Partial<Record<Project["slug"], FeatureCard>> = {
     tone: "dev",
     description:
       "Arsitektur modular yang memisahkan logika kognitif LLM, state management dunia, dan rendering visual untuk eksperimen AI lanjutan."
+  },
+  "baruna-teknik-globalindo": {
+    icon: "🔗",
+    title: "B2B Lead Generation",
+    tone: "data",
+    description:
+      "Mengintegrasikan call-to-action yang jelas pada setiap halaman produk untuk mengarahkan prospek klien langsung menghubungi tim sales representatif."
   }
 };
 

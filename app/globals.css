@@ -957,10 +957,43 @@ h4 {
   background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
-@media (max-width: 980px) {
-  .hero-grid,
-  .projects-grid,
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-grid > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-cta,
+  .badges {
+    justify-content: center;
+  }
+
   .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid,
+  .case-study-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid,
+  .case-study-grid,
+  .case-two-col {
     grid-template-columns: 1fr;
   }
 
@@ -970,26 +1003,35 @@ h4 {
     align-items: flex-start;
   }
 
+  .nav {
+    flex-wrap: wrap;
+  }
+
   .nav-links {
     gap: 12px;
     font-size: 0.88rem;
     overflow-x: auto;
-  }
-
-  .team-member {
-    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 8px;
+    /* allow horizontal scrolling if it overflows */
+    white-space: nowrap;
   }
 
   .quick-stats-grid {
     grid-template-columns: 1fr;
   }
 
-  .case-study-grid,
-  .case-two-col {
-    grid-template-columns: 1fr;
+  .hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
   }
 
   .gallery-main {
     min-height: 56vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-main {
+    min-height: 40vh;
   }
 }
