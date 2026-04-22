@@ -385,6 +385,20 @@ const projectsData = [
     order: 17,
     imageCount: 0,
     imageExtension: "png"
+  },
+  {
+    slug: "autonomous-llm-agents",
+    title: "Autonomous LLM Civilization",
+    category: "AI & Data",
+    tags: ["Next.js", "Python", "LLM", "Socket.io", "Zustand"],
+    description:
+      "Platform simulasi peradaban berbasis Large Language Model (LLM) dengan agen AI yang memiliki hierarki sosial, sistem hukum, dan trait kepribadian dinamis.",
+    content:
+      "Proyek ini adalah sebuah civilization engine eksperimental di mana agen-agen LLM berinteraksi dalam sebuah simulasi dunia, membentuk sistem peradilan otonom, dan berevolusi.",
+    featured: true,
+    order: 18,
+    imageCount: 0,
+    imageExtension: "png"
   }
 ] satisfies Project[];
 
@@ -418,7 +432,9 @@ const enrichedContentBySlug: Partial<Record<Project["slug"], string>> = {
   popskills:
     "PopSkills dirancang sebagai aplikasi pembelajaran mobile yang interaktif. Konsep utamanya adalah mengadaptasi elemen gamifikasi seperti sistem level, badge pencapaian, dan papan peringkat (leaderboard) untuk memotivasi pengguna agar konsisten dalam belajar. Antarmuka dibuat ramah pengguna dengan alur dari orientasi awal, pemilihan course, hingga penyelesaian kuis harian.",
   "quantum-htr":
-    "Quantum HTR adalah sistem cerdas berbasis Computer Vision yang dirancang khusus untuk membaca tulisan tangan aksara Korea (Hangeul) pada kertas format Wongoji. Sistem ini melalui proses pipeline yang kompleks mulai dari preprocessing citra, deteksi grid kolom, segmentasi karakter per kotak, hingga klasifikasi menggunakan model Deep Learning. Web interface yang dibangun dengan Django memudahkan proses unggah gambar dan menampilkan detail hasil prediksi beserta tingkat akurasi (Character Error Rate)."
+    "Quantum HTR adalah sistem cerdas berbasis Computer Vision yang dirancang khusus untuk membaca tulisan tangan aksara Korea (Hangeul) pada kertas format Wongoji. Sistem ini melalui proses pipeline yang kompleks mulai dari preprocessing citra, deteksi grid kolom, segmentasi karakter per kotak, hingga klasifikasi menggunakan model Deep Learning. Web interface yang dibangun dengan Django memudahkan proses unggah gambar dan menampilkan detail hasil prediksi beserta tingkat akurasi (Character Error Rate).",
+  "autonomous-llm-agents":
+    "Autonomous LLM Agents adalah platform simulasi di mana agen kecerdasan buatan dapat hidup, berinteraksi, dan membangun peradaban secara otonom. Dibangun dengan Next.js pada sisi frontend dan Python untuk backend engine, sistem ini mensimulasikan sistem hukum, mobilitas sosial melalui pernikahan, dan dinamika kejahatan yang diadili oleh Lord AI. Platform ini juga dilengkapi sistem save state untuk pergantian era peradaban dan WebSocket untuk monitoring aktivitas agen secara real-time."
 };
 
 const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["caseStudy"]>>> = {
@@ -1216,6 +1232,59 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
       "Menyediakan alat evaluasi (CER) yang objektif untuk mengukur kualitas model secara matematis.",
       "Menyatukan pipeline AI yang kompleks ke dalam satu platform web yang mudah digunakan oleh non-teknis."
     ]
+  },
+  "autonomous-llm-agents": {
+    hook:
+      "Eksperimen ini mengeksplorasi batas kemampuan agen LLM dalam membentuk sistem peradaban kompleks, di mana agen tidak hanya merespons prompt, tetapi memiliki state memori, peran sosial, dan kemampuan untuk menghakimi tindakan agen lain berdasarkan aturan hukum buatan mereka sendiri.",
+    featureCards: [
+      {
+        icon: "🧠",
+        title: "LLM Cognitive Processing",
+        tone: "data",
+        description:
+          "Siklus pemrosesan kognitif agen untuk mengambil keputusan, berevolusi, dan berinteraksi berdasarkan trait kepribadian serta era peradaban."
+      },
+      {
+        icon: "⚖️",
+        title: "Autonomous Justice System",
+        tone: "workflow",
+        description:
+          "Sistem hukum dinamis di mana agen 'Lord' secara otonom mengadili tindakan kriminal (seperti pencurian) dan memberikan hukuman seperti denda atau penjara."
+      },
+      {
+        icon: "👑",
+        title: "Social Mobility & Hierarchy",
+        tone: "workflow",
+        description:
+          "Simulasi pergerakan kelas sosial antar agen, termasuk sistem pernikahan di mana agen mewarisi atau mengubah status sosial mereka."
+      },
+      {
+        icon: "🔄",
+        title: "Real-time State Monitoring",
+        tone: "devops",
+        description:
+          "Integrasi Socket.io untuk melacak aktivitas agen, perpindahan lokasi di map, dan interaksi komunikasi secara instan di UI."
+      },
+      {
+        icon: "💾",
+        title: "Era Transition & Save System",
+        tone: "dev",
+        description:
+          "Mekanisme penyimpanan state dunia yang memungkinkan transisi ke era sejarah baru beserta evolusi kecerdasan agennya."
+      }
+    ],
+    journey: [
+      "Engine menginisialisasi parameter dunia, trait kepribadian agen, dan hierarki kelas sosial awal.",
+      "Agen mulai beraktivitas, bergerak di peta, dan berinteraksi sesuai peran (pekerja, penjaga, Lord).",
+      "Kejadian sosial atau kriminal dipicu secara otonom oleh proses pemikiran LLM.",
+      "Jika terjadi kejahatan, sistem hukum berjalan: penjaga menangkap, dan Lord menjatuhkan vonis.",
+      "Frontend Next.js menampilkan seluruh alur kejadian ini secara real-time kepada observer manusia."
+    ],
+    outcomes: [
+      "Membuktikan kelayakan LLM sebagai mesin penggerak simulasi sosial yang kompleks dan terprediksi.",
+      "Menciptakan arsitektur backend yang stabil untuk mengelola ratusan call LLM secara sinkronus maupun asinkronus.",
+      "Menyajikan antarmuka pengawasan dunia (world observer UI) yang reaktif menggunakan state management Zustand dan WebSocket."
+    ]
   }
 };
 
@@ -1386,6 +1455,13 @@ const extraFeatureCardBySlug: Partial<Record<Project["slug"], FeatureCard>> = {
     tone: "workflow",
     description:
       "Sistem ini dirancang dengan parameter pengujian ilmiah sehingga hasil keluarannya langsung dapat digunakan sebagai lampiran penelitian atau tugas akhir."
+  },
+  "autonomous-llm-agents": {
+    icon: "🌐",
+    title: "Civilization Engine Framework",
+    tone: "dev",
+    description:
+      "Arsitektur modular yang memisahkan logika kognitif LLM, state management dunia, dan rendering visual untuk eksperimen AI lanjutan."
   }
 };
 
