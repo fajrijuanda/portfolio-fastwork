@@ -371,6 +371,20 @@ const projectsData = [
     imageCount: 72,
     imageExtension: "png",
     figmaUrl: "https://www.figma.com/design/nQ0ubQWEP6cRWtYtXnVExb/PopSkills?node-id=0-1&t=EkmcZsuo5FvxYQDE-1"
+  },
+  {
+    slug: "quantum-htr",
+    title: "Quantum HTR",
+    category: "AI & Data",
+    tags: ["Django", "Python", "Computer Vision", "HTR"],
+    description:
+      "Sistem pengenalan karakter tulisan tangan (Handwritten Text Recognition) untuk aksara Hangeul berbasis format Wongoji.",
+    content:
+      "Quantum HTR merupakan proyek penelitian yang menerapkan model deep learning untuk mendeteksi, mensegmentasi, dan mengenali karakter tulisan tangan Hangeul pada format kertas Wongoji, lengkap dengan evaluasi Character Error Rate (CER).",
+    featured: true,
+    order: 17,
+    imageCount: 0,
+    imageExtension: "png"
   }
 ] satisfies Project[];
 
@@ -402,7 +416,9 @@ const enrichedContentBySlug: Partial<Record<Project["slug"], string>> = {
   "web-desa-mekarjaya":
     "Web Desa Mekarjaya menjadi pusat layanan informasi dan administrasi digital untuk warga. Website ini menggabungkan profil desa, berita, agenda, peta wilayah, serta layanan pengajuan surat online agar pelayanan publik lebih mudah dijangkau.",
   popskills:
-    "PopSkills dirancang sebagai aplikasi pembelajaran mobile yang interaktif. Konsep utamanya adalah mengadaptasi elemen gamifikasi seperti sistem level, badge pencapaian, dan papan peringkat (leaderboard) untuk memotivasi pengguna agar konsisten dalam belajar. Antarmuka dibuat ramah pengguna dengan alur dari orientasi awal, pemilihan course, hingga penyelesaian kuis harian."
+    "PopSkills dirancang sebagai aplikasi pembelajaran mobile yang interaktif. Konsep utamanya adalah mengadaptasi elemen gamifikasi seperti sistem level, badge pencapaian, dan papan peringkat (leaderboard) untuk memotivasi pengguna agar konsisten dalam belajar. Antarmuka dibuat ramah pengguna dengan alur dari orientasi awal, pemilihan course, hingga penyelesaian kuis harian.",
+  "quantum-htr":
+    "Quantum HTR adalah sistem cerdas berbasis Computer Vision yang dirancang khusus untuk membaca tulisan tangan aksara Korea (Hangeul) pada kertas format Wongoji. Sistem ini melalui proses pipeline yang kompleks mulai dari preprocessing citra, deteksi grid kolom, segmentasi karakter per kotak, hingga klasifikasi menggunakan model Deep Learning. Web interface yang dibangun dengan Django memudahkan proses unggah gambar dan menampilkan detail hasil prediksi beserta tingkat akurasi (Character Error Rate)."
 };
 
 const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["caseStudy"]>>> = {
@@ -1147,6 +1163,59 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
       "Mengurangi tingkat putus belajar (drop-off) berkat UX yang engaging.",
       "Menyediakan panduan desain komprehensif dari splash screen hingga admin panel."
     ]
+  },
+  "quantum-htr": {
+    hook:
+      "Tantangan utama dalam Quantum HTR adalah menangani variasi bentuk tulisan tangan Hangeul dan mengekstraksinya secara akurat dari pola grid kertas Wongoji (20x11) menjadi teks digital yang bisa dievaluasi performanya.",
+    featureCards: [
+      {
+        icon: "🧠",
+        title: "Deep Learning HTR Model",
+        tone: "data",
+        description:
+          "Model pengenalan karakter berbasis jaringan saraf tiruan yang dilatih khusus untuk memahami struktur kompleks suku kata Hangeul tulisan tangan."
+      },
+      {
+        icon: "🖼️",
+        title: "Wongoji Grid Segmentation",
+        tone: "devops",
+        description:
+          "Algoritma computer vision untuk mendeteksi garis grid pada kertas Wongoji dan memotong (crop) citra karakter satu per satu secara berurutan."
+      },
+      {
+        icon: "📊",
+        title: "CER Evaluation Metrics",
+        tone: "data",
+        description:
+          "Perhitungan Character Error Rate (CER) bawaan untuk membandingkan teks hasil prediksi model (Ground Truth) demi keperluan penelitian dan pengujian."
+      },
+      {
+        icon: "🖥️",
+        title: "Django Web Interface",
+        tone: "dev",
+        description:
+          "Antarmuka pengguna interaktif yang membungkus pipeline AI, memungkinkan pengguna mengunggah gambar kertas ujian dan langsung melihat hasil transkripsi."
+      },
+      {
+        icon: "📁",
+        title: "Batch Evaluation & Export",
+        tone: "workflow",
+        description:
+          "Mendukung evaluasi akurasi banyak data sekaligus dan mengekspor hasilnya ke dalam format Excel untuk analisis akademik lebih lanjut."
+      }
+    ],
+    journey: [
+      "Pengguna memindai (scan) atau memfoto kertas ujian Hangeul format Wongoji.",
+      "Gambar diunggah ke dalam sistem melalui antarmuka web Django.",
+      "Sistem memproses gambar: pra-pemrosesan citra, deteksi kotak grid (20x11), dan segmentasi karakter.",
+      "Model Deep Learning memprediksi teks dari masing-masing potongan karakter.",
+      "Sistem menampilkan hasil transkripsi beserta persentase kesalahan (CER) dan laporan Excel yang dapat diunduh."
+    ],
+    outcomes: [
+      "Mengotomatiskan proses transkripsi teks tulisan tangan Hangeul untuk efisiensi penelitian.",
+      "Menyediakan alat evaluasi (CER) yang objektif untuk mengukur kualitas model secara matematis.",
+      "Menyatukan pipeline AI yang kompleks ke dalam satu platform web yang mudah digunakan oleh non-teknis."
+    ]
   }
 };
 
@@ -1310,6 +1379,13 @@ const extraFeatureCardBySlug: Partial<Record<Project["slug"], FeatureCard>> = {
     tone: "dev",
     description:
       "Desain sistem yang konsisten di seluruh aplikasi memastikan pengalaman pengguna yang kohesif dan profesional."
+  },
+  "quantum-htr": {
+    icon: "🔬",
+    title: "Academic Research Integration",
+    tone: "workflow",
+    description:
+      "Sistem ini dirancang dengan parameter pengujian ilmiah sehingga hasil keluarannya langsung dapat digunakan sebagai lampiran penelitian atau tugas akhir."
   }
 };
 
