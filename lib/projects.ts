@@ -234,11 +234,11 @@ const projectsData = [
     slug: "siaga",
     title: "SIAGA",
     category: "Web App",
-    tags: ["Laravel", "Emergency Response", "Real-time"],
+    tags: ["PHP", "MySQL", "Pharmacy", "POS"],
     description:
-      "Sistem informasi dan penanganan gawat darurat untuk koordinasi respons cepat.",
+      "Sistem Informasi Apotek Mitra Galuh untuk manajemen stok obat, transaksi pembelian & penjualan, serta pelaporan operasional apotek.",
     content:
-      "SIAGA menghadirkan dashboard status, modul user, dan data operasional untuk tim tanggap darurat.",
+      "SIAGA (Sistem Informasi Apotek Mitra Galuh) adalah aplikasi berbasis web yang mengelola siklus operasional apotek mulai dari pencatatan stok obat, transaksi pembelian dari supplier, penjualan ke pelanggan, hingga laporan keuangan harian.",
     featured: false,
     order: 7,
     imageCount: 4,
@@ -426,7 +426,7 @@ const enrichedContentBySlug: Partial<Record<Project["slug"], string>> = {
   sikatup:
     "Sikatup (PLN) dirancang sebagai sistem monitoring kondisi trafo untuk mendeteksi gejala gangguan lebih awal. Aplikasi menyatukan indikator perangkat, alarm prioritas, dan ringkasan performa sehingga tim maintenance dapat menyusun tindakan preventif dengan lebih terstruktur.",
   siaga:
-    "SIAGA adalah platform koordinasi penanganan gawat darurat yang membantu tim respons mengelola laporan kejadian, status penanganan, dan komunikasi antar unit. Sistem ini menurunkan waktu respons dengan menyajikan informasi penting dalam dashboard yang mudah dipahami.",
+    "SIAGA (Sistem Informasi Apotek Mitra Galuh) adalah aplikasi manajemen apotek yang mencakup pencatatan stok obat, transaksi pembelian dari supplier, penjualan ke pelanggan, serta pelaporan keuangan harian. Dashboard utama menampilkan ringkasan transaksi, pendapatan, dan status inventaris agar operasional apotek berjalan lebih terukur dan efisien.",
   swiftyle:
     "Swiftyle menghadirkan ekosistem fashion commerce hybrid: web admin untuk seller dan aplikasi mobile untuk buyer. Platform ini mengelola katalog produk, pengalaman belanja, checkout, hingga pelacakan order agar proses bisnis berjalan rapi dari sisi penjual maupun pembeli.",
   echolytics:
@@ -668,55 +668,55 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
   },
   siaga: {
     hook:
-      "SIAGA menyatukan alur penanganan gawat darurat mulai dari penerimaan laporan, koordinasi tim, hingga pemantauan status insiden secara real-time agar respons lapangan lebih terkendali.",
+      "SIAGA mendigitalisasi seluruh siklus operasional apotek mulai dari manajemen stok obat, pencatatan transaksi pembelian dan penjualan, hingga pelaporan keuangan harian agar pengelolaan apotek lebih akurat dan efisien.",
     featureCards: [
       {
-        icon: "CALL",
-        title: "Incident Intake Module",
+        icon: "CART",
+        title: "Transaksi Pembelian & Penjualan",
         tone: "workflow",
         description:
-          "Laporan kejadian dicatat dengan data lokasi, jenis kasus, dan tingkat urgensi agar informasi awal respons lebih lengkap."
+          "Modul POS untuk mencatat transaksi pembelian obat dari supplier dan penjualan ke pelanggan dengan kalkulasi harga dan diskon otomatis."
       },
       {
-        icon: "DISP",
-        title: "Dispatch Coordination",
-        tone: "devops",
-        description:
-          "Koordinator dapat mengatur penugasan unit respons berdasarkan ketersediaan sumber daya dan prioritas kejadian."
-      },
-      {
-        icon: "LIVE",
-        title: "Realtime Status Board",
+        icon: "DATA",
+        title: "Manajemen Stok Obat",
         tone: "data",
         description:
-          "Perubahan status insiden terlihat langsung sehingga seluruh pihak memiliki sumber informasi yang sama selama penanganan."
+          "Pencatatan inventaris obat yang mencakup data masuk, keluar, stok minimum, dan peringatan kedaluwarsa untuk menjaga ketersediaan produk."
       },
       {
-        icon: "RES",
-        title: "Resource Allocation View",
-        tone: "workflow",
+        icon: "STAT",
+        title: "Dashboard Ringkasan Operasional",
+        tone: "dev",
         description:
-          "Sistem membantu memantau beban tim dan peralatan agar distribusi resource tetap proporsional di banyak kejadian."
+          "Dashboard utama menampilkan total pendapatan, jumlah transaksi, dan ringkasan stok agar pemilik apotek dapat memantau kinerja bisnis secara cepat."
       },
       {
         icon: "RPT",
-        title: "Post-Incident Reporting",
+        title: "Laporan Keuangan Harian",
         tone: "data",
         description:
-          "Dokumentasi penanganan, waktu respons, dan hasil akhir direkap untuk evaluasi kualitas layanan tanggap darurat."
+          "Sistem menghasilkan laporan penjualan dan pembelian harian untuk memudahkan rekonsiliasi keuangan dan pengambilan keputusan stok."
+      },
+      {
+        icon: "REG",
+        title: "Manajemen Supplier & Pelanggan",
+        tone: "workflow",
+        description:
+          "Data supplier dan pelanggan tercatat secara terstruktur untuk mempermudah proses repeat order dan pelacakan histori transaksi."
       }
     ],
     journey: [
-      "Operator menerima laporan dan mencatat detail kejadian ke sistem.",
-      "Koordinator menunjuk unit respons yang paling siap ditugaskan.",
-      "Tim lapangan memperbarui progres penanganan secara berkala.",
-      "Pusat komando memantau status real-time hingga insiden selesai.",
-      "Data penanganan dievaluasi untuk perbaikan SOP respons berikutnya."
+      "Admin mendaftarkan data obat, supplier, dan informasi produk ke dalam sistem.",
+      "Transaksi pembelian dari supplier dicatat untuk memperbarui stok masuk.",
+      "Kasir melakukan penjualan melalui modul POS dengan kalkulasi otomatis.",
+      "Dashboard menampilkan ringkasan pendapatan, jumlah transaksi, dan status stok.",
+      "Laporan harian dicetak untuk keperluan rekonsiliasi dan evaluasi bisnis."
     ],
     outcomes: [
-      "Mengurangi waktu respons melalui koordinasi digital yang terpusat.",
-      "Meningkatkan transparansi status penanganan antar tim.",
-      "Menyediakan data evaluasi yang kuat untuk peningkatan layanan darurat."
+      "Mempercepat proses transaksi apotek melalui digitalisasi POS.",
+      "Meningkatkan akurasi pencatatan stok obat dan mengurangi risiko kehabisan produk.",
+      "Menyediakan laporan keuangan yang terstruktur untuk pengambilan keputusan bisnis apotek."
     ]
   },
   swiftyle: {
