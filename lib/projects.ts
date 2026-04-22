@@ -387,8 +387,8 @@ const projectsData = [
     imageExtension: "jpeg"
   },
   {
-    slug: "autonomous-llm-agents",
-    title: "Autonomous LLM Civilization",
+    slug: "panopticon",
+    title: "Panopticon",
     category: "AI & Data",
     tags: ["Next.js", "Python", "LLM", "Socket.io", "Zustand"],
     description:
@@ -397,8 +397,8 @@ const projectsData = [
       "Proyek ini adalah sebuah civilization engine eksperimental di mana agen-agen LLM berinteraksi dalam sebuah simulasi dunia, membentuk sistem peradilan otonom, dan berevolusi.",
     featured: true,
     order: 18,
-    imageCount: 0,
-    imageExtension: "png"
+    imageCount: 9,
+    imageExtension: "jpeg"
   }
 ] satisfies Project[];
 
@@ -433,8 +433,8 @@ const enrichedContentBySlug: Partial<Record<Project["slug"], string>> = {
     "PopSkills dirancang sebagai aplikasi pembelajaran mobile yang interaktif. Konsep utamanya adalah mengadaptasi elemen gamifikasi seperti sistem level, badge pencapaian, dan papan peringkat (leaderboard) untuk memotivasi pengguna agar konsisten dalam belajar. Antarmuka dibuat ramah pengguna dengan alur dari orientasi awal, pemilihan course, hingga penyelesaian kuis harian.",
   "quantum-htr":
     "Quantum HTR adalah sistem cerdas berbasis Computer Vision yang dirancang khusus untuk membaca tulisan tangan aksara Korea (Hangeul) pada kertas format Wongoji. Sistem ini melalui proses pipeline yang kompleks mulai dari preprocessing citra, deteksi grid kolom, segmentasi karakter per kotak, hingga klasifikasi menggunakan model Deep Learning. Web interface yang dibangun dengan Django memudahkan proses unggah gambar dan menampilkan detail hasil prediksi beserta tingkat akurasi (Character Error Rate).",
-  "autonomous-llm-agents":
-    "Autonomous LLM Agents adalah platform simulasi di mana agen kecerdasan buatan dapat hidup, berinteraksi, dan membangun peradaban secara otonom. Dibangun dengan Next.js pada sisi frontend dan Python untuk backend engine, sistem ini mensimulasikan sistem hukum, mobilitas sosial melalui pernikahan, dan dinamika kejahatan yang diadili oleh Lord AI. Platform ini juga dilengkapi sistem save state untuk pergantian era peradaban dan WebSocket untuk monitoring aktivitas agen secara real-time."
+  panopticon:
+    "Panopticon adalah platform simulasi di mana agen kecerdasan buatan dapat hidup, berinteraksi, dan membangun peradaban secara otonom. Dibangun dengan Next.js pada sisi frontend dan Python untuk backend engine, sistem ini mensimulasikan sistem hukum, mobilitas sosial melalui pernikahan, dan dinamika kejahatan yang diadili oleh Lord AI. Platform ini juga dilengkapi sistem save state untuk pergantian era peradaban dan WebSocket untuk monitoring aktivitas agen secara real-time."
 };
 
 const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["caseStudy"]>>> = {
@@ -1233,7 +1233,7 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
       "Menyatukan pipeline AI yang kompleks ke dalam satu platform web yang mudah digunakan oleh non-teknis."
     ]
   },
-  "autonomous-llm-agents": {
+  panopticon: {
     hook:
       "Eksperimen ini mengeksplorasi batas kemampuan agen LLM dalam membentuk sistem peradaban kompleks, di mana agen tidak hanya merespons prompt, tetapi memiliki state memori, peran sosial, dan kemampuan untuk menghakimi tindakan agen lain berdasarkan aturan hukum buatan mereka sendiri.",
     featureCards: [
@@ -1456,7 +1456,7 @@ const extraFeatureCardBySlug: Partial<Record<Project["slug"], FeatureCard>> = {
     description:
       "Sistem ini dirancang dengan parameter pengujian ilmiah sehingga hasil keluarannya langsung dapat digunakan sebagai lampiran penelitian atau tugas akhir."
   },
-  "autonomous-llm-agents": {
+  panopticon: {
     icon: "🌐",
     title: "Civilization Engine Framework",
     tone: "dev",
