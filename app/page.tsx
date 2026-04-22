@@ -73,7 +73,7 @@ export default function HomePage() {
           <article className="panel">
             <h2>Tentang Kami</h2>
             <p>
-              {profile.summary}
+              Tim kami berdedikasi untuk mengembangkan solusi digital berkualitas tinggi yang menggabungkan keahlian dalam full-stack development, mobile development, dan data engineering. Kami percaya pada kolaborasi end-to-end dari perencanaan hingga deployment, dengan fokus pada teknologi modern dan praktik terbaik dalam industri.
             </p>
             <h3 style={{ marginTop: 14 }}>Tim Inti</h3>
             <div className="team-members">
@@ -91,9 +91,16 @@ export default function HomePage() {
                   <div className="team-member-body">
                     <h4>{member.name}</h4>
                     <p>{member.role}</p>
-                    <a href={member.linkedin} rel="noreferrer" target="_blank">
-                      Lihat LinkedIn
-                    </a>
+                    <div className="team-member-links">
+                      {member.github && (
+                        <a href={member.github} rel="noreferrer" target="_blank">
+                          GitHub
+                        </a>
+                      )}
+                      <a href={member.linkedin} rel="noreferrer" target="_blank">
+                        LinkedIn
+                      </a>
+                    </div>
                   </div>
                 </article>
               ))}

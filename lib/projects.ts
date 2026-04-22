@@ -22,6 +22,7 @@ export type Project = {
   };
   githubUrl?: string;
   demoUrl?: string;
+  figmaUrl?: string;
 };
 
 const projectsData = [
@@ -247,7 +248,7 @@ const projectsData = [
     slug: "swiftyle",
     title: "Swiftyle",
     category: "Mobile App",
-    tags: ["Laravel", "Ionic", "E-commerce"],
+    tags: ["Laravel", "Ionic", "E-commerce", "Figma"],
     description:
       "Platform fashion hybrid: web admin untuk penjual dan mobile app untuk pembeli.",
     content:
@@ -255,7 +256,8 @@ const projectsData = [
     featured: false,
     order: 8,
     imageCount: 16,
-    imageExtension: "jpg"
+    imageExtension: "jpg",
+    figmaUrl: "https://www.figma.com/design/BqRYR2fpzqzDh8tqJneLsz/Swiftyle-Ionic?node-id=0-1&t=AeFwEZV9TwSimrv5-1"
   },
   {
     slug: "echolytics",
@@ -354,6 +356,21 @@ const projectsData = [
     order: 15,
     imageCount: 12,
     imageExtension: "png"
+  },
+  {
+    slug: "popskills",
+    title: "PopSkills",
+    category: "UI/UX Design",
+    tags: ["Figma", "UI/UX", "Mobile App", "Gamification"],
+    description:
+      "Desain UI/UX aplikasi mobile pembelajaran interaktif dengan elemen gamifikasi seperti kuis, badge, dan leaderboard.",
+    content:
+      "PopSkills adalah rancangan aplikasi edukasi yang menggabungkan metode pembelajaran berbasis course dengan sistem gamifikasi untuk meningkatkan engagement pengguna.",
+    featured: true,
+    order: 16,
+    imageCount: 72,
+    imageExtension: "png",
+    figmaUrl: "https://www.figma.com/design/nQ0ubQWEP6cRWtYtXnVExb/PopSkills?node-id=0-1&t=EkmcZsuo5FvxYQDE-1"
   }
 ] satisfies Project[];
 
@@ -383,7 +400,9 @@ const enrichedContentBySlug: Partial<Record<Project["slug"], string>> = {
   "cbi-audit-vendor":
     "Portal Audit Vendor CBI dibuat untuk menstandardisasi proses audit eksternal secara terstruktur. Tim auditor dapat mencatat temuan, memberikan skor penilaian, dan memantau tindak lanjut perbaikan vendor dalam alur kerja yang transparan.",
   "web-desa-mekarjaya":
-    "Web Desa Mekarjaya menjadi pusat layanan informasi dan administrasi digital untuk warga. Website ini menggabungkan profil desa, berita, agenda, peta wilayah, serta layanan pengajuan surat online agar pelayanan publik lebih mudah dijangkau."
+    "Web Desa Mekarjaya menjadi pusat layanan informasi dan administrasi digital untuk warga. Website ini menggabungkan profil desa, berita, agenda, peta wilayah, serta layanan pengajuan surat online agar pelayanan publik lebih mudah dijangkau.",
+  popskills:
+    "PopSkills dirancang sebagai aplikasi pembelajaran mobile yang interaktif. Konsep utamanya adalah mengadaptasi elemen gamifikasi seperti sistem level, badge pencapaian, dan papan peringkat (leaderboard) untuk memotivasi pengguna agar konsisten dalam belajar. Antarmuka dibuat ramah pengguna dengan alur dari orientasi awal, pemilihan course, hingga penyelesaian kuis harian."
 };
 
 const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["caseStudy"]>>> = {
@@ -1075,6 +1094,59 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
       "Mempercepat proses administrasi melalui digitalisasi pengajuan surat.",
       "Memperkuat transparansi informasi antara pemerintah desa dan masyarakat."
     ]
+  },
+  popskills: {
+    hook:
+      "Desain PopSkills berfokus pada menciptakan pengalaman belajar yang menyenangkan (fun learning experience) melalui pendekatan gamifikasi, memecah materi menjadi misi-misi kecil yang mudah diselesaikan.",
+    featureCards: [
+      {
+        icon: "UX",
+        title: "Gamified Learning UI",
+        tone: "dev",
+        description:
+          "Antarmuka yang ceria dan intuitif dengan sistem reward visual seperti badge dan progress bar."
+      },
+      {
+        icon: "MOB",
+        title: "Interactive Quizzes",
+        tone: "workflow",
+        description:
+          "Rancangan layar kuis yang bervariasi untuk menjaga ketertarikan pengguna selama sesi belajar."
+      },
+      {
+        icon: "SCORE",
+        title: "Leaderboard & Social",
+        tone: "data",
+        description:
+          "Fitur kompetisi sehat antar pengguna melalui papan peringkat dan forum diskusi."
+      },
+      {
+        icon: "PROF",
+        title: "User Profile & Progress",
+        tone: "workflow",
+        description:
+          "Halaman profil yang menampilkan statistik, pencapaian, dan preferensi pembelajaran secara rinci."
+      },
+      {
+        icon: "ADM",
+        title: "Admin Management View",
+        tone: "devops",
+        description:
+          "Dashboard admin untuk mengelola pengguna, menambahkan kursus baru, dan memonitor aktivitas platform."
+      }
+    ],
+    journey: [
+      "Pengguna baru melewati proses onboarding dan pemilihan minat belajar.",
+      "Pengguna mengambil course harian dan menyelesaikan kuis interaktif.",
+      "Sistem memberikan poin, experience, dan badge atas pencapaian.",
+      "Pengguna memantau peringkat mereka di leaderboard dan berinteraksi di forum.",
+      "Admin platform memantau metrik penggunaan dan memperbarui konten kursus."
+    ],
+    outcomes: [
+      "Meningkatkan motivasi belajar melalui reward visual yang memuaskan.",
+      "Mengurangi tingkat putus belajar (drop-off) berkat UX yang engaging.",
+      "Menyediakan panduan desain komprehensif dari splash screen hingga admin panel."
+    ]
   }
 };
 
@@ -1231,6 +1303,13 @@ const extraFeatureCardBySlug: Partial<Record<Project["slug"], FeatureCard>> = {
     tone: "workflow",
     description:
       "Kanal publikasi terpusat memudahkan penyebaran informasi layanan, pengumuman, dan agenda ke warga."
+  },
+  popskills: {
+    icon: "🎨",
+    title: "Consistent Visual Language",
+    tone: "dev",
+    description:
+      "Desain sistem yang konsisten di seluruh aplikasi memastikan pengalaman pengguna yang kohesif dan profesional."
   }
 };
 

@@ -1,8 +1,8 @@
 export const profile = {
   name: "Portfolio",
-  role: "Full Stack Developer & Data Engineer Team",
+  role: "Full Stack Developer",
   summary:
-    "Kami berdua membangun portfolio ini dengan fokus gabungan di software engineering dan data engineering, dari UI modern sampai data workflow yang terukur.",
+    "Saya membangun portfolio ini dengan fokus di software engineering, dari UI modern sampai sistem web yang terukur.",
   contact: {
     email: "fajriyanuar1@gmail.com",
     whatsapp: "https://wa.me/6285217861296",
@@ -15,21 +15,17 @@ export type TeamMember = {
   name: string;
   role: string;
   linkedin: string;
+  github?: string;
   photo: string;
 };
 
 export const teamMembers: TeamMember[] = [
   {
     name: "Fajri Yanuar Shiddiq Juanda",
-    role: "Full Stack Developer",
+    role: "Full Stack Developer & Mobile Developer",
     linkedin: "https://linkedin.com/in/fajri-yanuar-shiddiq-juanda-3054502b8",
+    github: "https://github.com/fajrijuanda",
     photo: "/images/profile-fajri.png"
-  },
-  {
-    name: "Indra Rasyid",
-    role: "Data Engineer",
-    linkedin: "https://www.linkedin.com/in/indra-rasyid/",
-    photo: "/images/profile-indra.jpeg"
   }
 ];
 
@@ -75,18 +71,13 @@ export const skills = {
     "Next.js",
     "Flutter",
     "Ionic",
-    "CodeIgniter"
+    "CodeIgniter",
+    "Figma"
   ],
-  devops: ["Docker", "CI/CD"],
+  devops: [],
   data: [
-    "ETL/ELT",
-    "Data Lake",
-    "Data Warehouse",
-    "Data Mart",
-    "Airflow",
     "SQL",
-    "NoSQL",
-    "Processing & Viz (Superset, Tableau, Looker)"
+    "NoSQL"
   ],
   workflow: ["Git-based workflow"]
 };
@@ -122,30 +113,6 @@ export const services = [
     icon: "📱",
     tone: "dev",
     description: "Aplikasi Android/iOS untuk operasional bisnis dan pengalaman pelanggan."
-  },
-  {
-    title: "Data Engineering",
-    icon: "🛠",
-    tone: "data",
-    description: "Perancangan data pipeline, transformasi ETL/ELT, dan data mart untuk analitik bisnis."
-  },
-  {
-    title: "DevOps & CI/CD",
-    icon: "⚙",
-    tone: "devops",
-    description: "Containerization dengan Docker, otomatisasi build-release, dan deployment pipeline yang repeatable."
-  },
-  {
-    title: "Data Platform Architecture",
-    icon: "🗄",
-    tone: "data",
-    description: "Implementasi Data Lake, DWH, dan Data Mart untuk fondasi analitik dan reporting yang scalable."
-  },
-  {
-    title: "BI & Data Visualization",
-    icon: "📊",
-    tone: "data",
-    description: "Pembuatan dashboard insight dan monitoring menggunakan Superset, Tableau, atau Looker."
   },
   {
     title: "Git-based Team Workflow",
