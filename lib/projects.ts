@@ -383,8 +383,8 @@ const projectsData = [
       "Quantum HTR merupakan proyek penelitian yang menerapkan model deep learning untuk mendeteksi, mensegmentasi, dan mengenali karakter tulisan tangan Hangeul pada format kertas Wongoji, lengkap dengan evaluasi Character Error Rate (CER).",
     featured: true,
     order: 17,
-    imageCount: 0,
-    imageExtension: "png"
+    imageCount: 8,
+    imageExtension: "jpeg"
   },
   {
     slug: "autonomous-llm-agents",
