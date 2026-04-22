@@ -28,7 +28,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-grid">
           <div>
-            <span className="pill">Open to Work • Full Stack Developer & Data Engineer</span>
+            <span className="pill">Open to Work • Full Stack & Mobile Developer</span>
             <h1>
               Bangun Produk Digital
               <span className="gradient"> yang Cepat, Solid, dan Terukur.</span>
@@ -42,7 +42,7 @@ export default function HomePage() {
                 Lihat Proyek
               </Link>
               <Link className="btn btn-ghost" href="#contact">
-                Hubungi Kami
+                Hubungi Saya
               </Link>
             </div>
             <div className="badges" style={{ marginTop: 14 }}>
@@ -56,8 +56,8 @@ export default function HomePage() {
           <div className="hero-card hero-info-card">
             <h3>{profile.role}</h3>
             <p>
-              Fokus kolaborasi kami ada di pengembangan aplikasi full-stack, cloud deployment,
-              dan data engineering workflow yang siap dipakai untuk kebutuhan production.
+              Fokus utama saya ada di pengembangan aplikasi full-stack, mobile development,
+              dan cloud deployment yang siap dipakai untuk kebutuhan production.
             </p>
             <div className="badges">
               <span className="badge">Web Development</span>
@@ -71,12 +71,11 @@ export default function HomePage() {
       <section className="section" id="about">
         <div className="container grid-2">
           <article className="panel">
-            <h2>Tentang Kami</h2>
+            <h2>Tentang Saya</h2>
             <p>
-              Tim kami berdedikasi untuk mengembangkan solusi digital berkualitas tinggi yang menggabungkan keahlian dalam full-stack development, mobile development, dan data engineering. Kami percaya pada kolaborasi end-to-end dari perencanaan hingga deployment, dengan fokus pada teknologi modern dan praktik terbaik dalam industri.
+              Saya berdedikasi untuk mengembangkan solusi digital berkualitas tinggi yang menggabungkan keahlian dalam full-stack development dan mobile development. Saya menangani proses end-to-end dari perencanaan hingga deployment, dengan fokus pada teknologi modern dan praktik terbaik dalam industri.
             </p>
-            <h3 style={{ marginTop: 14 }}>Tim Inti</h3>
-            <div className="team-members">
+            <div className="team-members" style={{ marginTop: 24 }}>
               {teamMembers.map((member) => (
                 <article className="team-member" key={member.name}>
                   <div className="team-avatar-wrap">
@@ -128,9 +127,9 @@ export default function HomePage() {
             </div>
 
             <div className="quick-stats-summary">
-              <p>Tim inti: {coreTeamSize} orang (Full Stack Developer & Data Engineer).</p>
+              <p>Fokus keahlian: Full Stack Developer & Mobile Developer.</p>
               <p>Layanan aktif yang ditawarkan: {services.length} kategori.</p>
-              <p>Model kolaborasi: end-to-end dari perencanaan, development, hingga deployment.</p>
+              <p>Pendekatan kerja: end-to-end dari perencanaan, development, hingga deployment.</p>
             </div>
 
             <h3 style={{ marginTop: 14 }}>Top Domain Proyek</h3>

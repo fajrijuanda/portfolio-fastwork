@@ -1,6 +1,6 @@
 # Portfolio Next.js (Static)
 
-Versi Next.js statis dari portfolio, tanpa database dan tanpa dependency backend Laravel.
+Versi Next.js statis dari portfolio, tanpa database dan tanpa dependency backend.
 
 ## Karakteristik
 
