@@ -411,8 +411,8 @@ const projectsData = [
       "Proyek ini melibatkan pengembangan website company profile yang komprehensif untuk PT Baruna Teknik Globalindo, menampilkan katalog lengkap produk pompa industri, motor listrik, dan layanan engineering mereka.",
     featured: false,
     order: 19,
-    imageCount: 0,
-    imageExtension: "png"
+    imageCount: 11,
+    imageExtension: "jpeg"
   }
 ] satisfies Project[];
 
