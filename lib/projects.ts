@@ -413,6 +413,21 @@ const projectsData = [
     order: 19,
     imageCount: 11,
     imageExtension: "jpeg"
+  },
+  {
+    slug: "klinik-permata-adinda",
+    title: "ERP Klinik Permata Adinda",
+    category: "Web App",
+    tags: ["Next.js", "ERP", "Prisma", "MySQL", "NextAuth"],
+    description:
+      "Sistem ERP klinik berbasis Next.js untuk mengelola profil klinik, cabang, hak akses, presensi, notifikasi, aktivitas, dan konten website.",
+    content:
+      "ERP Klinik Permata Adinda menggabungkan website publik klinik kandungan dan kebidanan dengan admin panel operasional untuk manajemen konten, pengguna, cabang, audit aktivitas, serta pengaturan sistem.",
+    featured: true,
+    order: 20,
+    imageCount: 19,
+    imageExtension: "png",
+    githubUrl: "https://github.com/fajrijuanda/klinik-permata-adinda"
   }
 ] satisfies Project[];
 
@@ -450,7 +465,9 @@ const enrichedContentBySlug: Partial<Record<Project["slug"], string>> = {
   panopticon:
     "Panopticon adalah platform simulasi di mana agen kecerdasan buatan dapat hidup, berinteraksi, dan membangun peradaban secara otonom. Dibangun dengan Next.js pada sisi frontend dan Python untuk backend engine, sistem ini mensimulasikan sistem hukum, mobilitas sosial melalui pernikahan, dan dinamika kejahatan yang diadili oleh Lord AI. Platform ini juga dilengkapi sistem save state untuk pergantian era peradaban dan WebSocket untuk monitoring aktivitas agen secara real-time.",
   "baruna-teknik-globalindo":
-    "Website company profile untuk PT Baruna Teknik Globalindo, distributor peralatan mekanikal, elektrikal, dan instrumentasi. Platform ini dirancang sebagai katalog digital B2B untuk memudahkan klien industri menjelajahi ratusan varian produk mulai dari motor listrik, pompa sentrifugal kelas berat, hingga alat-alat keselamatan kerja dari berbagai merek global terkemuka."
+    "Website company profile untuk PT Baruna Teknik Globalindo, distributor peralatan mekanikal, elektrikal, dan instrumentasi. Platform ini dirancang sebagai katalog digital B2B untuk memudahkan klien industri menjelajahi ratusan varian produk mulai dari motor listrik, pompa sentrifugal kelas berat, hingga alat-alat keselamatan kerja dari berbagai merek global terkemuka.",
+  "klinik-permata-adinda":
+    "ERP Klinik Permata Adinda adalah platform operasional berbasis Next.js yang menyatukan website publik klinik dengan dashboard admin. Sistem ini mendukung pengelolaan profil klinik, konten landing page, data cabang, tim dokter, hak akses admin, presensi, notifikasi, audit aktivitas, dan konfigurasi sistem. Backend menggunakan Prisma dan MySQL, sementara autentikasi admin dibangun dengan NextAuth agar akses internal lebih terkontrol."
 };
 
 const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["caseStudy"]>>> = {
@@ -1339,6 +1356,59 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
       "Mempermudah tim sales dalam memberikan referensi katalog produk digital kepada klien kapan saja.",
       "Menyediakan platform informasi produk 24/7 yang dapat diakses dengan lancar tanpa kendala teknis."
     ]
+  },
+  "klinik-permata-adinda": {
+    hook:
+      "ERP Klinik Permata Adinda dibangun untuk menyatukan kebutuhan publikasi layanan klinik dan operasional internal dalam satu platform: website pasien tetap informatif, sementara admin dapat mengelola data, konten, akses, dan aktivitas sistem secara terstruktur.",
+    featureCards: [
+      {
+        icon: "CMS",
+        title: "Content Management Console",
+        tone: "workflow",
+        description:
+          "Admin dapat memperbarui hero, profil klinik, layanan, tim dokter, promosi, testimoni, kontak, dan informasi jaringan cabang tanpa menyentuh kode."
+      },
+      {
+        icon: "AUTH",
+        title: "Role-based Admin Access",
+        tone: "devops",
+        description:
+          "Autentikasi NextAuth dan role admin/superadmin menjaga akses fitur internal tetap sesuai tanggung jawab pengguna."
+      },
+      {
+        icon: "BRCH",
+        title: "Branch & Clinic Profile",
+        tone: "data",
+        description:
+          "Data cabang, profil klinik, dan informasi layanan dikelola sebagai sumber informasi operasional yang konsisten di dashboard."
+      },
+      {
+        icon: "LOG",
+        title: "Activity Monitoring",
+        tone: "data",
+        description:
+          "Audit aktivitas mencatat perubahan penting, user aktif, trusted device, dan histori aksi agar proses administrasi lebih mudah dilacak."
+      },
+      {
+        icon: "UI",
+        title: "Responsive Public Website",
+        tone: "dev",
+        description:
+          "Website publik menghadirkan layanan kandungan dan kebidanan, profil dokter, promosi, testimoni, dan kontak dalam tampilan modern yang mobile-friendly."
+      }
+    ],
+    journey: [
+      "Pasien atau pengunjung mengakses website publik untuk melihat layanan, profil dokter, promosi, dan kontak klinik.",
+      "Admin login ke dashboard internal dengan akun yang sudah diberi hak akses.",
+      "Tim klinik memperbarui konten website, data cabang, dan informasi layanan dari modul content management.",
+      "Superadmin mengelola user, role, pengaturan, dan trusted device untuk menjaga keamanan akses.",
+      "Aktivitas perubahan dan presensi dipantau melalui dashboard agar operasional tetap transparan."
+    ],
+    outcomes: [
+      "Mempermudah klinik memperbarui informasi layanan dan promosi tanpa proses deployment ulang.",
+      "Meningkatkan kontrol akses internal melalui role admin, device trust, dan audit trail.",
+      "Menyediakan fondasi ERP klinik yang siap dikembangkan ke modul operasional berikutnya seperti appointment, pasien, dan billing."
+    ]
   }
 };
 
@@ -1523,6 +1593,13 @@ const extraFeatureCardBySlug: Partial<Record<Project["slug"], FeatureCard>> = {
     tone: "data",
     description:
       "Mengintegrasikan call-to-action yang jelas pada setiap halaman produk untuk mengarahkan prospek klien langsung menghubungi tim sales representatif."
+  },
+  "klinik-permata-adinda": {
+    icon: "DB",
+    title: "Prisma-backed Operational Data",
+    tone: "dev",
+    description:
+      "Skema data menggunakan Prisma dan MySQL untuk mengelola admin, konten halaman, visitor, dan activity log secara lebih rapi."
   }
 };
 
