@@ -77,7 +77,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageParams) {
       {project.caseStudy ? (
         <div className="container section" style={{ paddingTop: 0 }}>
           <article className="panel case-study-panel">
-            <h2>Kenapa {project.title} Menarik Untuk Client?</h2>
+            <h2>Sorotan Utama {project.title}</h2>
             <p className="text-muted" style={{ marginTop: 8 }}>
               {project.caseStudy.hook}
             </p>
