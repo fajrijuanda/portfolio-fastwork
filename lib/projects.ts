@@ -578,6 +578,59 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
       "Menyediakan alur operasional yang lebih terstruktur untuk merchant."
     ]
   },
+  "portal-kemahasiswaan": {
+    hook:
+      "Portal Kemahasiswaan UBP dirancang untuk mendigitalisasi proses administrasi dan layanan mahasiswa, memberikan akses cepat dan terintegrasi dalam satu platform yang modern.",
+    featureCards: [
+      {
+        icon: "🎓",
+        title: "Layanan Akademik Terpadu",
+        tone: "workflow",
+        description:
+          "Mahasiswa dapat mengakses informasi akademik, jadwal kuliah, dan pengumuman penting secara real-time dari satu dashboard utama."
+      },
+      {
+        icon: "📝",
+        title: "Pendaftaran Kegiatan",
+        tone: "devops",
+        description:
+          "Proses registrasi acara kampus dan unit kegiatan mahasiswa dikelola sepenuhnya secara digital untuk meminimalisir penggunaan kertas."
+      },
+      {
+        icon: "💬",
+        title: "Forum Komunikasi",
+        tone: "dev",
+        description:
+          "Menyediakan ruang diskusi antar mahasiswa dan dosen untuk memfasilitasi komunikasi yang efektif di lingkungan kampus."
+      },
+      {
+        icon: "📈",
+        title: "Monitoring Prestasi",
+        tone: "data",
+        description:
+          "Riwayat aktivitas dan pencapaian mahasiswa tercatat secara terpusat, memudahkan pemantauan dan evaluasi oleh pihak universitas."
+      },
+      {
+        icon: "📱",
+        title: "Aksesibilitas Mobile",
+        tone: "workflow",
+        description:
+          "Antarmuka yang responsif memastikan portal dapat diakses dengan nyaman melalui perangkat mobile maupun desktop."
+      }
+    ],
+    journey: [
+      "Mahasiswa login ke portal menggunakan akun universitas.",
+      "Melihat dashboard untuk memeriksa pengumuman dan jadwal terkini.",
+      "Mendaftar kegiatan atau mengunduh dokumen akademik yang diperlukan.",
+      "Berinteraksi dalam forum atau menghubungi layanan administrasi.",
+      "Melacak riwayat aktivitas dan pencapaian akademik secara berkala."
+    ],
+    outcomes: [
+      "Meningkatkan efisiensi layanan administrasi kemahasiswaan.",
+      "Memudahkan akses informasi akademik secara merata bagi seluruh mahasiswa.",
+      "Mendorong partisipasi mahasiswa dalam kegiatan kampus melalui pendaftaran digital."
+    ]
+  },
 
   sikatup: {
     hook:
