@@ -213,7 +213,7 @@ const projectsData = [
       "Platform terpusat untuk mengelola kegiatan mahasiswa, layanan akademik, dan informasi kampus secara digital.",
     featured: false,
     order: 5,
-    imageCount: 1,
+    imageCount: 5,
     imageExtension: "png",
     demoUrl: "https://portal-kemahasiswaan.vercel.app/"
   },
