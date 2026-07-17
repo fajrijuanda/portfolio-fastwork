@@ -203,18 +203,19 @@ const projectsData = [
     imageExtension: "png"
   },
   {
-    slug: "besra-geonet",
-    title: "BESRA GeoNet",
+    slug: "portal-kemahasiswaan",
+    title: "Portal Kemahasiswaan UBP",
     category: "Web App",
-    tags: ["Next.js", "WebGIS", "Asset Mgmt"],
+    tags: ["PHP", "Laravel", "Portal", "University"],
     description:
-      "Sistem Informasi Geografis untuk manajemen aset jaringan fiber optic PT Besra Utama Sinaran.",
+      "Portal sistem informasi kemahasiswaan untuk Universitas Buana Perjuangan (UBP) Karawang.",
     content:
-      "Platform GIS ini membantu tracking homepass, splitter, dan cakupan jaringan dalam satu tampilan operasional.",
+      "Platform terpusat untuk mengelola kegiatan mahasiswa, layanan akademik, dan informasi kampus secara digital.",
     featured: false,
     order: 5,
-    imageCount: 11,
-    imageExtension: "png"
+    imageCount: 1,
+    imageExtension: "png",
+    demoUrl: "https://portal-kemahasiswaan.vercel.app/"
   },
   {
     slug: "sikatup",
@@ -436,8 +437,8 @@ const enrichedContentBySlug: Partial<Record<Project["slug"], string>> = {
     "Kumbung Jamur IoT dibangun untuk menjaga stabilitas lingkungan budidaya jamur tiram melalui pembacaan sensor suhu dan kelembaban secara real-time. Dashboard menampilkan kondisi terkini, histori perubahan, dan notifikasi ambang batas agar petani dapat mengambil tindakan cepat sebelum kualitas panen menurun.",
   posify:
     "Posify adalah aplikasi mobile food commerce dengan alur belanja end-to-end: mulai dari browsing menu, tambah keranjang, checkout, sampai pemantauan status pesanan. Fokus utamanya adalah membuat pengalaman order tetap cepat, jelas, dan nyaman untuk pengguna sekaligus mudah dikelola oleh tim operasional.",
-  "besra-geonet":
-    "BESRA GeoNet menggabungkan data aset jaringan fiber optic ke dalam peta operasional berbasis WebGIS. Tim lapangan dan manajemen dapat memantau lokasi homepass, splitter, dan cakupan jaringan untuk mempercepat proses troubleshooting, perencanaan ekspansi, serta validasi data infrastruktur.",
+  "portal-kemahasiswaan":
+    "Portal Kemahasiswaan UBP dirancang sebagai pusat informasi dan layanan digital terintegrasi bagi mahasiswa Universitas Buana Perjuangan Karawang. Platform ini mempermudah akses mahasiswa terhadap pengumuman akademik, pendaftaran kegiatan, dan layanan kemahasiswaan lainnya dalam satu dashboard yang responsif dan mudah digunakan.",
   sikatup:
     "Sikatup (PLN) dirancang sebagai sistem monitoring kondisi trafo untuk mendeteksi gejala gangguan lebih awal. Aplikasi menyatukan indikator perangkat, alarm prioritas, dan ringkasan performa sehingga tim maintenance dapat menyusun tindakan preventif dengan lebih terstruktur.",
   siaga:
@@ -577,59 +578,7 @@ const caseStudiesBySlug: Partial<Record<Project["slug"], NonNullable<Project["ca
       "Menyediakan alur operasional yang lebih terstruktur untuk merchant."
     ]
   },
-  "besra-geonet": {
-    hook:
-      "BESRA GeoNet memetakan seluruh aset jaringan fiber optic ke dalam satu workspace WebGIS agar aktivitas monitoring, validasi data lapangan, dan ekspansi jaringan dapat dikelola lebih cepat dan akurat.",
-    featureCards: [
-      {
-        icon: "GIS",
-        title: "Asset Mapping Layer",
-        tone: "dev",
-        description:
-          "Homepass, splitter, dan elemen jaringan divisualisasikan sebagai layer peta untuk memudahkan navigasi data infrastruktur."
-      },
-      {
-        icon: "SRCH",
-        title: "Spatial Search & Filtering",
-        tone: "workflow",
-        description:
-          "Tim dapat memfilter area, status aset, dan titik jaringan tertentu untuk mempercepat proses investigasi operasional."
-      },
-      {
-        icon: "DATA",
-        title: "Network Coverage Insights",
-        tone: "data",
-        description:
-          "Dashboard cakupan membantu melihat wilayah yang sudah terlayani dan area prioritas pengembangan jaringan berikutnya."
-      },
-      {
-        icon: "SYNC",
-        title: "Field Update Synchronization",
-        tone: "devops",
-        description:
-          "Perubahan data dari aktivitas lapangan dapat disinkronkan agar informasi aset tetap relevan dengan kondisi aktual di lapangan."
-      },
-      {
-        icon: "PLAN",
-        title: "Expansion Planning Support",
-        tone: "workflow",
-        description:
-          "Visual peta dipakai sebagai dasar koordinasi lintas tim untuk menentukan prioritas pembangunan dan jalur infrastruktur baru."
-      }
-    ],
-    journey: [
-      "Data aset jaringan dikumpulkan dan dipetakan ke layer GIS.",
-      "Operator melakukan pencarian titik jaringan berdasarkan area dan atribut.",
-      "Tim memvalidasi data lapangan serta memperbarui perubahan aset.",
-      "Manajemen menggunakan peta cakupan untuk menyusun rencana ekspansi.",
-      "Laporan operasional disusun berdasarkan data spasial yang terpusat."
-    ],
-    outcomes: [
-      "Meningkatkan visibilitas infrastruktur jaringan dalam satu dashboard peta.",
-      "Mempercepat investigasi gangguan dan koordinasi tim lapangan.",
-      "Mendukung keputusan ekspansi jaringan berbasis data spasial yang akurat."
-    ]
-  },
+
   sikatup: {
     hook:
       "Sikatup membantu PLN memantau kesehatan trafo secara berkala melalui dashboard indikator dan alarm prioritas, sehingga potensi gangguan dapat direspons lebih cepat sebelum menimbulkan dampak luas.",
