@@ -34,7 +34,10 @@ async function takeScreenshots() {
       
       const pageHeight = await page.evaluate(() => document.documentElement.scrollHeight);
       const viewportHeight = 900;
-      const numScreenshots = Math.ceil(pageHeight / viewportHeight);
+      let numScreenshots = 1;
+      while (pageHeight > numScreenshots * viewportHeight + 250) {
+        numScreenshots++;
+      }
       
       for (let i = 0; i < numScreenshots; i++) {
         await page.evaluate((y) => {

@@ -37,7 +37,7 @@ const projectsData = [
       "Omnia menawarkan solusi Enterprise Resource Planning komprehensif yang menghubungkan berbagai aspek operasional bisnis. Platform ini dirancang fleksibel untuk mendukung sektor F&B, kesehatan, hingga ritel dalam satu ekosistem digital yang modern dan skalabel.",
     featured: true,
     order: 1.5,
-    imageCount: 33,
+    imageCount: 32,
     imageExtension: "png",
     caseStudy: {
       hook:
