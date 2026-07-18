@@ -179,7 +179,7 @@ const projectsData = [
         {
           icon: "🚀",
           title: "Optimized Landing",
-          tone: "marketing",
+          tone: "workflow",
           description:
             "Landing page dengan performa tinggi yang dirancang khusus untuk menarik calon pelanggan dari berbagai industri."
         },
