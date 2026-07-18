@@ -27,6 +27,65 @@ export type Project = {
 
 const projectsData = [
   {
+    slug: "omnia",
+    title: "Omnia",
+    category: "Cloud & DevOps",
+    tags: ["Next.js", "React", "Enterprise", "ERP"],
+    description:
+      "Platform ERP terintegrasi untuk manajemen klinik, HRIS, retail, dan cafe dengan antarmuka yang modern.",
+    content:
+      "Omnia adalah solusi all-in-one Enterprise Resource Planning yang memudahkan operasional bisnis mulai dari pendaftaran pasien di klinik, manajemen karyawan (HRIS), sistem POS retail, hingga kasir cafe dalam satu ekosistem yang saling terhubung.",
+    featured: true,
+    order: 1,
+    imageCount: 6,
+    imageExtension: "png",
+    caseStudy: {
+      hook:
+        "Omnia dirancang sebagai platform ERP end-to-end yang mengintegrasikan berbagai pilar bisnis: dari pengelolaan klinik kesehatan, retail point of sale, manajemen kafe, hingga HRIS perusahaan, semuanya dalam satu antarmuka yang bersih dan mudah digunakan.",
+      featureCards: [
+        {
+          icon: "🏥",
+          title: "Klinik & Healthcare Management",
+          tone: "workflow",
+          description:
+            "Modul khusus untuk mengelola rekam medis, antrean pasien, dan jadwal dokter secara terpusat untuk layanan kesehatan yang lebih efisien."
+        },
+        {
+          icon: "🛒",
+          title: "Retail & POS System",
+          tone: "data",
+          description:
+            "Sistem kasir cerdas yang mendukung manajemen inventaris real-time, laporan penjualan, dan pelacakan stok antar cabang."
+        },
+        {
+          icon: "☕",
+          title: "Cafe & F&B Operations",
+          tone: "devops",
+          description:
+            "Antarmuka khusus F&B untuk manajemen pesanan meja, kustomisasi menu, hingga integrasi dengan kitchen display system."
+        },
+        {
+          icon: "👥",
+          title: "HRIS & Employee Portal",
+          tone: "dev",
+          description:
+            "Platform lengkap untuk absensi digital, perhitungan payroll otomatis, pengajuan cuti, dan evaluasi kinerja karyawan."
+        }
+      ],
+      journey: [
+        "Pengguna memilih modul yang sesuai dengan jenis usaha mereka.",
+        "Akses terpusat melalui portal login ke dashboard spesifik (Klinik, Retail, Cafe, HRIS).",
+        "Sistem memproses transaksi dan menyimpan data ke cloud secara real-time.",
+        "Pemilik bisnis melihat laporan konsolidasi seluruh cabang pada satu layar."
+      ],
+      outcomes: [
+        "Meningkatkan efisiensi operasional dengan menghilangkan silo data antar departemen.",
+        "Mempercepat waktu layanan di kasir dan pendaftaran hingga 40%.",
+        "Memberikan visibilitas penuh bagi manajemen untuk mengambil keputusan berbasis data yang akurat."
+      ]
+    }
+  },
+  {
     slug: "hostoo",
     title: "Hostoo",
     category: "Cloud & DevOps",
