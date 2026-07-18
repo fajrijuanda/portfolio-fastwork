@@ -170,7 +170,7 @@ const projectsData = [
       "Omnia menawarkan solusi lengkap untuk berbagai jenis bisnis, mulai dari F&B dengan integrasi POS, pengelolaan HR, hingga manajemen klinik dan bengkel.",
     featured: true,
     order: 1.5,
-    imageCount: 32,
+    imageCount: 33,
     imageExtension: "png",
     caseStudy: {
       hook:
