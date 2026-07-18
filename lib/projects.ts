@@ -29,59 +29,73 @@ const projectsData = [
   {
     slug: "omnia",
     title: "Omnia",
-    category: "Cloud & DevOps",
-    tags: ["Next.js", "React", "Enterprise", "ERP"],
+    category: "Enterprise & SaaS",
+    tags: ["Next.js", "React", "TypeScript", "ERP"],
     description:
-      "Platform ERP terintegrasi untuk manajemen klinik, HRIS, retail, dan cafe dengan antarmuka yang modern.",
+      "Sistem SaaS all-in-one untuk berbagai industri dengan fitur POS terintegrasi, HRIS, manajemen inventaris, dan analitik data.",
     content:
-      "Omnia adalah solusi all-in-one Enterprise Resource Planning yang memudahkan operasional bisnis mulai dari pendaftaran pasien di klinik, manajemen karyawan (HRIS), sistem POS retail, hingga kasir cafe dalam satu ekosistem yang saling terhubung.",
+      "Omnia menawarkan solusi Enterprise Resource Planning komprehensif yang menghubungkan berbagai aspek operasional bisnis. Platform ini dirancang fleksibel untuk mendukung sektor F&B, kesehatan, hingga ritel dalam satu ekosistem digital yang modern dan skalabel.",
     featured: true,
-    order: 1,
-    imageCount: 6,
+    order: 1.5,
+    imageCount: 33,
     imageExtension: "png",
     caseStudy: {
       hook:
-        "Omnia dirancang sebagai platform ERP end-to-end yang mengintegrasikan berbagai pilar bisnis: dari pengelolaan klinik kesehatan, retail point of sale, manajemen kafe, hingga HRIS perusahaan, semuanya dalam satu antarmuka yang bersih dan mudah digunakan.",
+        "Omnia dirancang sebagai platform ERP end-to-end yang menyederhanakan kompleksitas bisnis modern. Dengan menggabungkan manajemen penjualan, sumber daya manusia, dan operasional dalam satu antarmuka, Omnia memberikan pengalaman pengguna yang seamless untuk berbagai skala usaha.",
       featureCards: [
         {
-          icon: "🏥",
-          title: "Klinik & Healthcare Management",
+          icon: "🚀",
+          title: "Multi-Industry ERP Platform",
           tone: "workflow",
           description:
-            "Modul khusus untuk mengelola rekam medis, antrean pasien, dan jadwal dokter secara terpusat untuk layanan kesehatan yang lebih efisien."
+            "Sistem komprehensif yang dirancang fleksibel untuk mendukung berbagai sektor usaha mulai dari F&B, layanan kesehatan, hingga bisnis ritel."
         },
         {
           icon: "🛒",
-          title: "Retail & POS System",
+          title: "Point of Sale & Inventory",
           tone: "data",
           description:
-            "Sistem kasir cerdas yang mendukung manajemen inventaris real-time, laporan penjualan, dan pelacakan stok antar cabang."
-        },
-        {
-          icon: "☕",
-          title: "Cafe & F&B Operations",
-          tone: "devops",
-          description:
-            "Antarmuka khusus F&B untuk manajemen pesanan meja, kustomisasi menu, hingga integrasi dengan kitchen display system."
+            "Manajemen kasir cerdas dengan pelacakan stok real-time antar cabang untuk memastikan kelancaran dan akurasi operasional harian."
         },
         {
           icon: "👥",
           title: "HRIS & Employee Portal",
           tone: "dev",
           description:
-            "Platform lengkap untuk absensi digital, perhitungan payroll otomatis, pengajuan cuti, dan evaluasi kinerja karyawan."
+            "Modul lengkap untuk absensi digital, perhitungan payroll otomatis, persetujuan cuti, serta pengelolaan data kepegawaian."
+        },
+        {
+          icon: "📊",
+          title: "Data-Driven Analytics",
+          tone: "data",
+          description:
+            "Dashboard interaktif yang menyajikan laporan penjualan, kinerja karyawan, dan tren operasional secara konsolidasi dari seluruh cabang."
+        },
+        {
+          icon: "🤝",
+          title: "Seamless Omnichannel Experience",
+          tone: "workflow",
+          description:
+            "Menghubungkan layanan pelanggan dari reservasi, manajemen pesanan mandiri, hingga sistem antrean dalam alur kerja yang terintegrasi."
+        },
+        {
+          icon: "☁️",
+          title: "Scalable Cloud Architecture",
+          tone: "devops",
+          description:
+            "Infrastruktur cloud-native yang menjamin sistem tetap stabil, aman, dan responsif seiring bertambahnya volume transaksi bisnis."
         }
       ],
       journey: [
-        "Pengguna memilih modul yang sesuai dengan jenis usaha mereka.",
-        "Akses terpusat melalui portal login ke dashboard spesifik (Klinik, Retail, Cafe, HRIS).",
-        "Sistem memproses transaksi dan menyimpan data ke cloud secara real-time.",
-        "Pemilik bisnis melihat laporan konsolidasi seluruh cabang pada satu layar."
+        "Pengguna menjelajahi landing page Omnia untuk mengeksplorasi modul yang sesuai dengan model bisnis mereka.",
+        "Mendaftar akun dan mengatur konfigurasi awal seperti profil bisnis, cabang, dan data karyawan melalui portal.",
+        "Mengelola operasional harian dari pemrosesan transaksi di kasir hingga pemantauan inventaris secara real-time.",
+        "Pemilik bisnis mengakses laporan konsolidasi seluruh cabang pada satu layar dashboard interaktif."
       ],
       outcomes: [
-        "Meningkatkan efisiensi operasional dengan menghilangkan silo data antar departemen.",
-        "Mempercepat waktu layanan di kasir dan pendaftaran hingga 40%.",
-        "Memberikan visibilitas penuh bagi manajemen untuk mengambil keputusan berbasis data yang akurat."
+        "Meningkatkan efisiensi dengan menghubungkan berbagai departemen dan menghilangkan silo data dalam perusahaan.",
+        "Mempercepat waktu pelayanan kepada pelanggan melalui alur operasional dan sistem kasir yang telah dioptimasi.",
+        "Memberikan kemudahan bagi manajemen untuk mengambil keputusan strategis berbasis data yang transparan dan akurat."
       ]
     }
   },
@@ -156,50 +170,6 @@ const projectsData = [
         "Mempercepat onboarding user dari halaman promosi ke dashboard produk.",
         "Mengurangi friksi operasional karena deployment dan billing berada dalam satu ekosistem.",
         "Meningkatkan visibilitas bisnis dengan metrik user, subscription, dan status sistem yang realtime-ready."
-      ]
-    }
-  },
-  {
-    slug: "omnia",
-    title: "Omnia",
-    category: "Enterprise & SaaS",
-    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    description:
-      "Sistem SaaS all-in-one untuk bisnis F&B, HRIS, Klinik, dan Bengkel dengan pengalaman modern.",
-    content:
-      "Omnia menawarkan solusi lengkap untuk berbagai jenis bisnis, mulai dari F&B dengan integrasi POS, pengelolaan HR, hingga manajemen klinik dan bengkel.",
-    featured: true,
-    order: 1.5,
-    imageCount: 33,
-    imageExtension: "png",
-    caseStudy: {
-      hook:
-        "Omnia merupakan platform bisnis enterprise dan UMKM yang menggabungkan banyak solusi dalam satu atap, memberikan pengalaman pengguna yang seamless.",
-      featureCards: [
-        {
-          icon: "🚀",
-          title: "Optimized Landing",
-          tone: "workflow",
-          description:
-            "Landing page dengan performa tinggi yang dirancang khusus untuk menarik calon pelanggan dari berbagai industri."
-        },
-        {
-          icon: "📊",
-          title: "Multi-Industry Solutions",
-          tone: "data",
-          description:
-            "Sistem yang fleksibel mendukung kebutuhan spesifik seperti F&B, Klinik, Manufaktur, dan HRIS."
-        }
-      ],
-      journey: [
-        "Pengunjung menjelajahi landing page Omnia dan melihat berbagai modul yang tersedia.",
-        "Mereka mendaftar untuk mencoba fitur spesifik seperti F&B atau HRIS.",
-        "Setelah login, mereka diarahkan ke dashboard portal untuk mengelola layanan.",
-        "Platform mendukung operasi sehari-hari dengan alat yang terspesialisasi."
-      ],
-      outcomes: [
-        "Memberikan solusi yang disesuaikan untuk berbagai jenis usaha.",
-        "Meningkatkan konversi dengan halaman pendaftaran yang aman dan mudah digunakan."
       ]
     }
   },
