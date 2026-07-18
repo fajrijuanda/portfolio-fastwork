@@ -160,6 +160,50 @@ const projectsData = [
     }
   },
   {
+    slug: "omnia",
+    title: "Omnia",
+    category: "Enterprise & SaaS",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    description:
+      "Sistem SaaS all-in-one untuk bisnis F&B, HRIS, Klinik, dan Bengkel dengan pengalaman modern.",
+    content:
+      "Omnia menawarkan solusi lengkap untuk berbagai jenis bisnis, mulai dari F&B dengan integrasi POS, pengelolaan HR, hingga manajemen klinik dan bengkel.",
+    featured: true,
+    order: 1.5,
+    imageCount: 6,
+    imageExtension: "png",
+    caseStudy: {
+      hook:
+        "Omnia merupakan platform bisnis enterprise dan UMKM yang menggabungkan banyak solusi dalam satu atap, memberikan pengalaman pengguna yang seamless.",
+      featureCards: [
+        {
+          icon: "🚀",
+          title: "Optimized Landing",
+          tone: "marketing",
+          description:
+            "Landing page dengan performa tinggi yang dirancang khusus untuk menarik calon pelanggan dari berbagai industri."
+        },
+        {
+          icon: "📊",
+          title: "Multi-Industry Solutions",
+          tone: "data",
+          description:
+            "Sistem yang fleksibel mendukung kebutuhan spesifik seperti F&B, Klinik, Manufaktur, dan HRIS."
+        }
+      ],
+      journey: [
+        "Pengunjung menjelajahi landing page Omnia dan melihat berbagai modul yang tersedia.",
+        "Mereka mendaftar untuk mencoba fitur spesifik seperti F&B atau HRIS.",
+        "Setelah login, mereka diarahkan ke dashboard portal untuk mengelola layanan.",
+        "Platform mendukung operasi sehari-hari dengan alat yang terspesialisasi."
+      ],
+      outcomes: [
+        "Memberikan solusi yang disesuaikan untuk berbagai jenis usaha.",
+        "Meningkatkan konversi dengan halaman pendaftaran yang aman dan mudah digunakan."
+      ]
+    }
+  },
+  {
     slug: "skyflow",
     title: "SkyFlow",
     category: "Cloud & DevOps",
